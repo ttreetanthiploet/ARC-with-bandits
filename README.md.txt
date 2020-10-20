@@ -1,1 +1,0 @@
-HOw to use this program
