@@ -22,7 +22,7 @@ or
 >MAB_Sample = MAB_environment("linear", 3)
 >```
 
-**4.** Set a precision matrix (P) for "additional_info" bandit or set a feature, a variance inverse and prior precision (B,V,Sigma_0)for "linear" bandit. For example,
+**4.** Set a precision matrix (P) for "additional_info" bandit or set a feature, a variance inverse and prior precision (B, V, Sigma_0) for "linear" bandit. For example,
 >```
 >P = np.identity(3)
 >MAB_Alg.set_P_info(P)
@@ -36,6 +36,25 @@ or
 >MAB_Alg.set_feature_and_var_and_prior_var(V, B)
 >MAB_Alg.set_decision_prior_var(Sigma_0)
 >MAB_Sample.set_feature_and_var_and_prior_var(V, B)
+>```
+
+**5.** Set a reward premium for each bandit. For example,
+>```
+>MAB_Alg.set_reward_premium(np.array([0.5,0,0]))
+>```
+
+**6.** Set a parameter $\theta$ for a system of bandits. For example,
+>```
+>MAB_Sample.set_theta(np.array([3,2,1]))
+>```
+
+**6.** Set a prior decision and generate an initail information. For example,
+>```
+>prior_mean = np.array([0,0,0])
+>prior_precision = np.identity(3)
+>Initial_n = np.array([5,5,5])
+>m,n = MAB_Sample.Initialise_information(Initial_n, prior_mean, prior_precision)
+>#We shall think of d in the paper as 1/n 
 >```
 
 
