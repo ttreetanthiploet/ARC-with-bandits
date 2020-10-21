@@ -22,7 +22,7 @@ or
 >MAB_Sample = MAB_environment("linear", 3)
 >```
 
-**4.** Set a precision matrix ($P$) for "additional_info" bandit or set a feature, a variance inverse and prior precision ($B,V,Sigma_0$)for "linear" bandit. For example,
+**4.** Set a precision matrix (P) for "additional_info" bandit or set a feature, a variance inverse and prior precision (B,V,Sigma_0)for "linear" bandit. For example,
 >```
 >P = np.identity(3)
 >MAB_Alg.set_P_info(P)
