@@ -1,2 +1,2 @@
 # ARC-with-bandits
-My first README.md
+These are examples of Python script for the paper Asymptotic Randomised Control with applications to bandits (https://arxiv.org/abs/2010.07252)
