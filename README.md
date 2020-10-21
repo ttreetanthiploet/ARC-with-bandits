@@ -48,7 +48,7 @@ or
 >MAB_Sample.set_theta(np.array([3,2,1]))
 >```
 
-**6.** Set a prior decision and generate an initail information. For example,
+**7.** Set a prior decision and generate an initail information. For example,
 >```
 >prior_mean = np.array([0,0,0])
 >prior_precision = np.identity(3)
@@ -57,12 +57,12 @@ or
 ># We shall think of d in the paper as 1/n 
 >```
 
-**7.** Choose an algorithm to make a decision. Identify the decision parameter as appropriate. The algorithm name: ARC, Thompson_simulation, Greedy, Bayes_UCB, KG or IDS can be identify as an attribute of the class MAB_algorithm. For example,
+**8.** Choose an algorithm to make a decision. Identify the decision parameter as appropriate. The algorithm name: ARC, Thompson_simulation, Greedy, Bayes_UCB, KG or IDS can be identify as an attribute of the class MAB_algorithm. For example,
 >```
 >Algorithm = MAB_Alg.ARC(0.05, 0.999)
 >```
 
-**8.** Run a simulation and record the decision we have made.
+**9.** Run a simulation and record the decision we have made.
 >```
 >Horizon = 1000
 >Decision_record = [None]*Horizon
