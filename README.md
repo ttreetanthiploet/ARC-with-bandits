@@ -54,8 +54,27 @@ or
 >prior_precision = np.identity(3)
 >Initial_n = np.array([5,5,5])
 >m,n = MAB_Sample.Initialise_information(Initial_n, prior_mean, prior_precision)
->#We shall think of d in the paper as 1/n 
+># We shall think of d in the paper as 1/n 
 >```
+
+**7.** Choose an algorithm to make a decision. Identify the decision parameter as appropriate. The algorithm name: ARC, Thompson_simulation, Greedy, Bayes_UCB, KG or IDS can be identify as an attribute of the class MAB_algorithm. For example,
+>```
+>Algorithm = MAB_Alg.ARC(0.05, 0.999)
+>```
+
+**8.** Run a simulation and record the decision we have made.
+>```
+>Horizon = 1000
+>Decision_record = [None]*Horizon
+>for t in range(Horizon):
+>   Decision_record[t] = Algorithm(m,n, t+1, Horizon)
+>   Observation = MAB_Sample.Sample(Decision_record[t])
+>   m, n = MAB_Alg.Parameter_update(m, n, Observation, Decision_record[t])
+>```
+
+An example of a script to run a parallel simulation and a plot of the quantile regret can be found in MAB_run.py.
+
+
 
 
 
